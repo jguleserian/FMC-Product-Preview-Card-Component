@@ -1,0 +1,175 @@
+/* *Reset Margins, Padding, Box-sizing & Define Variables for colors and font */
+
+:root {
+    /* colors: primary (converted to hex) */
+    --dark-cyan: #3d8168;
+    --cream: #f2ebe3;
+    /* colors: neutral (converted to hex) */
+    --very-dark-blue: #1c232b;
+    --dark-grayish-blue: #6c7289;
+    --white: #ffffff;
+    /* typography */
+    --mont: Montserrat, sans-serif;
+    --frau: Fraunces, serif;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--cream);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+}
+
+
+/* CONTAINERS */
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 600px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+div.prices {
+    width: 19.4rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.8rem 0 3rem 0;
+}
+
+section.prod-text {
+    padding: 32px;
+}
+
+
+/* ELEMENTS */
+
+button {
+    width: 236px;
+    height: 48px;
+    background-color: var(--dark-cyan);
+    font-family: var(--mont);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--white);
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover {
+    background-color: #1A4032;
+}
+
+h1 {
+    font-family: var(--frau);
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--very-dark-blue);
+    line-height: 3.2rem;
+    margin-bottom: 2.3rem;
+}
+
+h2 {
+    font-family: var(--frau);
+    font-size: 3.2rem;
+    color: var(--dark-cyan);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--mont);
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    line-height: 1.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 2.3rem;
+}
+
+img.img-desktop {
+    display: inline;
+    height: 450px;
+    border-radius: 10px 0 0 10px;
+}
+
+img.img-mobile {
+    display: none;
+    height: 450px;
+    border-radius: 10px 10px 0 0;
+}
+
+p.description {
+    font-size: 1.4rem;
+    font-family: var(--mont);
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    line-height: 2.3rem;
+}
+
+p.old-price {
+    font-family: var(--mont);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    line-height: 2.3rem;
+    text-decoration-line: line-through;
+}
+
+svg {
+    height: 1.6rem;
+    width: 1.5rem;
+    fill: var(--white);
+    margin-right: 1rem;
+}
+
+
+/* MEDIA QUERY at 375px */
+
+@media only screen and (max-width: 375px) {
+    button {
+        width: 29.5rem;
+    }
+    div {
+        width: 343px;
+        height: 611px;
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 40% 60%;
+    }
+    img.img-desktop {
+        display: none;
+    }
+    img.img-mobile {
+        display: inline;
+        height: 240px;
+    }
+    section.prod-text {
+        padding: 20px 24px 24px 24px;
+    }
+    h3 {
+        margin-bottom: 1.4rem;
+    }
+    h1 {
+        margin-bottom: 1.6rem;
+    }
+    div.prices {
+        margin: 2.2rem 0 2rem 0;
+    }
+}
